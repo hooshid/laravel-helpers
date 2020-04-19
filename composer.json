@@ -8,7 +8,9 @@
     "authors": [
         {
             "name": "Alireza Kamali",
-            "email": "arka1373@gmail.com"
+            "email": "arka1373@gmail.com",
+            "homepage": "https://github.com/arkamali",
+            "role": "Developer"
         }
     ],
     "minimum-stability": "dev",

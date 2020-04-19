@@ -42,7 +42,7 @@ php artisan vendor:publish --provider="Hooshid\Helpers\HelperServiceProvider" --
 
 ## Usage
 
-This package comes with some built in helpers that you can choose to use or not. By default all of these helpers are inactive for your application. To adjust which helpers are active and which are inactive, open `config/helpers.php` and find the `package_helpers` option. Add any helpers you wish to activate to this key. Check the source code to see what functions are included in each helper and what each does.
+This package comes with some built in helpers that you can choose to use or not. By default all of these helpers are active for your application. To adjust which helpers are active and which are inactive, open `config/helpers.php` and find the `package_helpers` option. Add or Remove any helpers you wish to activate/inactive to this key. Check the source code to see what functions are included in each helper and what each does.
 
 You can also create your own custom helpers for inclusion in your application. An Artisan generator helps you quickly make new helpers for your application. 
 
@@ -69,6 +69,10 @@ if (!function_exists('hello')) {
     }
 }
 ```
+
+## Change log
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
 ## License
 
