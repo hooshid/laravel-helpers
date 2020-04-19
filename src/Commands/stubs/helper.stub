@@ -1,0 +1,15 @@
+<?php
+
+if (!function_exists('DummyFunction')) {
+
+    /**
+     * DummyFunction
+     *
+     * @param
+     * @return
+     */
+    function DummyFunction()
+    {
+        //
+    }
+}

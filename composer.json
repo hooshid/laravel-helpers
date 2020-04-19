@@ -1,0 +1,32 @@
+{
+    "name": "hooshid/laravel-helpers",
+    "description": "generic laravel helper functions",
+    "keywords": ["laravel", "helpers", "hooshid"],
+    "homepage": "https://github.com/hooshid/laravel-helpers",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alireza Kamali",
+            "email": "arka1373@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "^6|^7|^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hooshid\\Helpers\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hooshid\\Helpers\\HelperServiceProvider"
+            ]
+        }
+    }
+}
