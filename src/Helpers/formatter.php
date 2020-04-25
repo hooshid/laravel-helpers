@@ -75,6 +75,7 @@ if (!function_exists('filter_input')) {
     function filter_input($value)
     {
         $value = strip_tags($value);
+        $value = str_replace('‏', '', $value);
         $value = trim($value);
         $value = htmlspecialchars($value, ENT_QUOTES);
 
