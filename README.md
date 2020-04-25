@@ -100,7 +100,7 @@ format_bytes($bytes, $precision = 2);
 remove html tags from input:
 
 ```php
-clean_string($value);
+clean_string($value, $functions);
 
 ```
 
