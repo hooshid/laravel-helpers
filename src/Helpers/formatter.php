@@ -72,13 +72,26 @@ if (!function_exists('clean_string')) {
      * @param $value
      * @return string
      */
-    function clean_string($value)
+    function clean_string($value, $functions)
     {
         $value = strip_tags($value);
         $value = trim($value, '‏');
         $value = trim($value);
         $value = htmlspecialchars($value, ENT_QUOTES);
 
+        if (!empty($functions)) {
+            $ex = explode('|', $functions);
+
+            foreach ($ex as $func) {
+                if ($func == "str_lower") {
+                    $value = str_lower($value);
+                } elseif ($func == "str_upper") {
+                    $value = str_upper($value);
+                } elseif ($func == "phone") {
+                    $value = phone($value);
+                }
+            }
+        }
         return $value;
     }
 }
