@@ -70,9 +70,10 @@ if (!function_exists('clean_string')) {
      * remove html tags from input
      *
      * @param $value
+     * @param null $functions
      * @return string
      */
-    function clean_string($value, $functions)
+    function clean_string($value, $functions = null)
     {
         $value = strip_tags($value);
         $value = trim($value, '‏');
@@ -87,8 +88,17 @@ if (!function_exists('clean_string')) {
                     $value = str_lower($value);
                 } elseif ($func == "str_upper") {
                     $value = str_upper($value);
+                } elseif ($func == "number") {
+                    $value = str_replace(['+', '-'], '', filter_var($value, FILTER_SANITIZE_NUMBER_INT));
+                } elseif ($func == "string") {
+                    $value = preg_replace('/[^A-Za-z \-]/', '', $value);
                 } elseif ($func == "phone") {
                     $value = phone($value);
+                } elseif ($func == "remove_all_spaces") {
+                    $value = str_replace(' ', '', $value);
+                } elseif ($func == "remove_extra_spaces") {
+                    $value = str_replace('  ', ' ', $value);
+                    $value = str_replace('  ', ' ', $value);
                 }
             }
         }
