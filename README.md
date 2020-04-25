@@ -95,12 +95,12 @@ format_bytes($bytes, $precision = 2);
 ```
 
 
-#### `filter_input()`
+#### `clean_string()`
 
 remove html tags from input:
 
 ```php
-filter_input($value);
+clean_string($value);
 
 ```
 

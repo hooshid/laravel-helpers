@@ -65,17 +65,17 @@ if (!function_exists('format_bytes')) {
     }
 }
 
-if (!function_exists('filter_input')) {
+if (!function_exists('clean_string')) {
     /**
      * remove html tags from input
      *
      * @param $value
      * @return string
      */
-    function filter_input($value)
+    function clean_string($value)
     {
         $value = strip_tags($value);
-        $value = str_replace('‏', '', $value);
+        $value = trim($value, '‏');
         $value = trim($value);
         $value = htmlspecialchars($value, ENT_QUOTES);
 
