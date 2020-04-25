@@ -70,6 +70,95 @@ if (!function_exists('hello')) {
 }
 ```
 
+## Available functions
+
+> New functions are always adding. Feel free to contribute.
+
+### Formatter
+
+#### `get_excerpt()`
+
+get excerpt of text:
+
+```php
+get_excerpt($text, $maxChars = null, $suffix = '...', $br = true, $clean_html = true);
+
+```
+
+#### `format_bytes()`
+
+Format bytes into kilobytes, megabytes, gigabytes or terabytes:
+
+```php
+format_bytes($bytes, $precision = 2);
+
+```
+
+
+#### `filter_input()`
+
+remove html tags from input:
+
+```php
+filter_input($value);
+
+```
+
+
+#### `phone()`
+
+phone formatter (iran mobile and home phone numbers):
+
+```php
+phone($phone);
+
+```
+
+### Image
+
+#### `image()`
+
+provides default image if empty:
+
+```php
+$image = image('/images/test.jpg');
+
+// /images/test.jpg
+
+```
+
+#### `gravatar()`
+
+provides gravatar image (if your app use laravel auth, when run function with null value, function try to catch user email with auth()->user()->email):
+
+```php
+$gravatar = gravatar('email@gmail.com');
+
+```
+
+### Strings
+
+#### `str_lower()`
+
+Convert string to lowercase, assuming it's using the `UTF-8` encoding:
+
+```php
+$lower = str_lower('TeSt');
+
+// test
+```
+
+#### `str_upper()`
+
+Convert string to uppercase, assuming it's using the `UTF-8` encoding:
+
+```php
+$upper = str_upper('TeSt');
+
+// TEST
+```
+
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
