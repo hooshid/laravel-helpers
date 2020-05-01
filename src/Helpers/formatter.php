@@ -78,7 +78,6 @@ if (!function_exists('clean_string')) {
         $value = strip_tags($value);
         $value = trim($value, '‏');
         $value = trim($value);
-        $value = htmlspecialchars($value, ENT_QUOTES);
 
         if (!empty($functions)) {
             $ex = explode('|', $functions);
